@@ -1,0 +1,30 @@
+{
+  "name": "Hotel Het Anker",
+  "homepage": "https://github.com/daantje00123/hotel_het_anker",
+  "authors": [
+    "Daan van Berkel <info@daanvanberkel.nl>"
+  ],
+  "description": "Reserveringssyteem voor Hotel Het Anker",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "Hotel",
+    "Anker",
+    "Reserveren",
+    "Systeem"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "formatter.js": "formatter#^0.1.5",
+    "bootstrap": "v4-dev",
+    "jquery-ui": "^1.11.4"
+  }
+}

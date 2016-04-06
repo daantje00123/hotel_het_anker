@@ -1,0 +1,75 @@
+* {
+    border-radius: 0 !important;
+}
+
+.btn-arrow-right {
+    padding-left: 28px;
+    position: relative;
+}
+
+.btn-arrow-right:before, .btn-arrow-right:after {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    border-top: 1px solid;
+    transform: rotate(45deg);
+    border-right: 1px solid;
+    background-color: white;
+    top: 5px;
+}
+
+.btn-arrow-right:before {
+    left: -14px;
+}
+
+.btn-arrow-right:after {
+    right: -14px;
+    z-index:1;
+}
+
+.btn-arrow-right:hover:after, .btn-arrow-right:hover:before {
+    border-color: inherit;
+}
+
+.btn-arrow-right:hover:after {
+    background-color: inherit;
+}
+
+.btn-arrow-left {
+    padding-right: 28px;
+    margin-left: 28px;
+    position: relative;
+}
+
+.btn-arrow-left:before, .btn-arrow-left:after {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    border-color: inherit;
+    border-top: 1px solid;
+    transform: rotate(225deg);
+    border-right: 1px solid;
+    background-color: white;
+    top: 5px;
+}
+
+.btn-arrow-left:before {
+    left: -14px;
+    z-index:1;
+}
+
+.btn-arrow-left:after {
+    right: -14px;
+}
+
+.btn-arrow-left:hover:after, .btn-arrow-left:hover:before {
+    border-color: inherit;
+}
+
+.btn-arrow-left:hover:before {
+    background-color: inherit;
+}
