@@ -91,10 +91,17 @@ class Kamer_model extends CI_Model
                 reserveringen AS c ON a.id_kamer = c.id_kamer
             WHERE
                 a.id_kamer_type = ".$this->db->escape($type)."
-            AND
-                (c.van < ".$this->db->escape($van)." OR c.van IS NULL)
-            AND
-                (c.tot > ".$this->db->escape($tot)." OR c.tot IS NULL)
+            AND a.id_kamer NOT IN
+                (
+                    SELECT id_kamer FROM reserveringen WHERE 
+                        (van < ".$this->db->escape($van)." AND tot < ".$this->db->escape($tot).")
+                    OR
+                        (van > ".$this->db->escape($van)." AND tot <= ".$this->db->escape($tot).")
+                    OR 
+                        (van > ".$this->db->escape($van)." AND tot > ".$this->db->escape($tot).")
+                    OR
+                        (van < ".$this->db->escape($van)." AND tot > ".$this->db->escape($tot).")
+                )
         ";
 
         $result = $this->db->query($sql);
